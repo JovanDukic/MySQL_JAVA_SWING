@@ -301,6 +301,12 @@ public class MainFrame extends JFrame {
 						"WarningDB", JOptionPane.INFORMATION_MESSAGE);
 			}
 
+			@Override
+			public void printMessage(String message) {
+				JOptionPane.showMessageDialog(MainFrame.this, message,
+						"WarningDB", JOptionPane.INFORMATION_MESSAGE);
+			}
+
 		});
 
 		commands.setSetTableNames(new SetTableNames() {
@@ -320,6 +326,8 @@ public class MainFrame extends JFrame {
 				toolbar_panel.removeTableName(tableName);
 			}
 		});
+		
+		
 
 		myDialog.setDialog_listener(new My_dialog_listener() {
 
@@ -377,7 +385,7 @@ public class MainFrame extends JFrame {
 		JMenuItem refresh = new JMenuItem("Refresh");
 		JMenuItem defaultWindow = new JMenuItem("Reset tabs");
 
-		JMenuItem dialog = new JMenuItem("Preferences..."); // JDIALOG po dogovoru idu ... posle naziva!!!
+		JMenuItem dialog = new JMenuItem("Preferences...");
 
 		JCheckBoxMenuItem showTablePanel = new JCheckBoxMenuItem("show table");
 		JCheckBoxMenuItem showUserInput = new JCheckBoxMenuItem("show user input");

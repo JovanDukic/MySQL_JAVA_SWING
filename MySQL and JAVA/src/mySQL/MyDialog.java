@@ -40,7 +40,7 @@ public class MyDialog extends JDialog {
 	private My_dialog_listener dialog_listener;
 
 	public MyDialog(JFrame parent) {
-		super(parent, "Preferences", true); // TRUE mora da se iskljucivo radi na dialogu neda prelazak na druge
+		super(parent, "Preferences", true); // TRUE mora da se iskljucivo radi na dialogu ne da prelazak na druge
 											// prozore!!!
 		setSize(300, 200);
 		setIconImage(My_icon_renderer.createIcon("/images/preferences.png").getImage());
@@ -109,7 +109,7 @@ public class MyDialog extends JDialog {
 
 		gc.gridx = 0;
 		gc.insets = new Insets(0, 0, 0, 5);
-		gc.anchor = GridBagConstraints.EAST; // NE GURA DO VRHA KAO FIRST LINE END ILI START !!!
+		gc.anchor = GridBagConstraints.EAST;
 		controlPanel.add(new JLabel("User: "), gc);
 
 		gc.gridx = 1;

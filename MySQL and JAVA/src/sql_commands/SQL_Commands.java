@@ -287,7 +287,7 @@ public class SQL_Commands {
 
 			if (connection != null) {
 
-				System.out.println("Connected");
+				warnings.printMessage("Connected to db.");
 
 				setTableNames(); 
 
@@ -295,7 +295,7 @@ public class SQL_Commands {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
+			warnings.printMessage("Error: " + e.getMessage());
 		}
 
 	}
